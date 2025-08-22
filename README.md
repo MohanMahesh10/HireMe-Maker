@@ -2,6 +2,17 @@
 
 An AI-powered web application that helps optimize resumes for better ATS (Applicant Tracking System) scores using Google's Gemini AI.
 
+![Screenshot 2025-08-22 122322](https://github.com/user-attachments/assets/557ff43b-8c41-48fb-ba97-7a2547e5f34f)
+
+
+![Screenshot 2025-08-22 122035](https://github.com/user-attachments/assets/4a31a397-4420-4be0-8393-34321f7e43c5)
+
+
+![Screenshot 2025-08-22 121801](https://github.com/user-attachments/assets/f0be38ad-08ba-4260-a12c-2a8236506fec)
+
+
+
+
 ## ✨ Features
 
 - **📱 Mobile-First Design**: Fully responsive with touch-friendly interface optimized for all devices
