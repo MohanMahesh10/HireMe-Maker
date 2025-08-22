@@ -53,7 +53,7 @@ An AI-powered web application that helps optimize resumes for better ATS (Applic
 .\start-docker.ps1
 ```
 
-### Option 2: Using Make Commands
+### Option 2: Using MakeCommands
 ```bash
 # Show available commands
 make help
