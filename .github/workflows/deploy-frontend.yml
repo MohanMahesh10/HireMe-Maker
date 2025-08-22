@@ -33,14 +33,19 @@ jobs:
       - name: Build
         working-directory: frontend
         env:
+          CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
           # PUBLIC_URL defines the correct base path for CRA on GitHub Pages
-          PUBLIC_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          PUBLIC_URL: ${{ secrets.CUSTOM_DOMAIN || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
           # Backend API base URL for production build
           REACT_APP_API_URL: ${{ secrets.BACKEND_URL }}
         run: |
           npm run build
           # SPA fallback for GitHub Pages refresh on subroutes
           cp build/index.html build/404.html
+          # Optional custom domain CNAME (if provided as secret)
+          if [ -n "${CUSTOM_DOMAIN}" ]; then
+            echo "${CUSTOM_DOMAIN}" > build/CNAME
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

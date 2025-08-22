@@ -3,7 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import google.generativeai as genai
 import io
-import fitz  # PyMuPDF
+try:
+    import fitz  # PyMuPDF (optional on some hosts)
+except Exception:
+    fitz = None
 import pdfplumber
 from docx import Document
 from docx.shared import Inches
@@ -70,17 +73,19 @@ async def set_api_key(api_key: str = Form(...)):
 def extract_text_from_file(file_content: bytes, filename: str) -> str:
     """Extract text from uploaded resume file"""
     if filename.lower().endswith('.pdf'):
-        # Try with PyMuPDF first
-        try:
-            doc = fitz.open(stream=file_content, filetype="pdf")
-            text = "".join(page.get_text() for page in doc)
-            doc.close()
-            return text
-        except Exception:
-            # Fallback to pdfplumber
-            with pdfplumber.open(io.BytesIO(file_content)) as pdf:
-                text = "".join(page.extract_text() or "" for page in pdf.pages)
+        # Try with PyMuPDF first if available
+        if fitz is not None:
+            try:
+                doc = fitz.open(stream=file_content, filetype="pdf")
+                text = "".join(page.get_text() for page in doc)
+                doc.close()
                 return text
+            except Exception:
+                pass
+        # Fallback to pdfplumber (pure-Python)
+        with pdfplumber.open(io.BytesIO(file_content)) as pdf:
+            text = "".join(page.extract_text() or "" for page in pdf.pages)
+            return text
     
     elif filename.lower().endswith(('.doc', '.docx')):
         doc = Document(io.BytesIO(file_content))
