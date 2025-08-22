@@ -328,7 +328,8 @@ npm install
 npm start
 ```
 
-![Uploading _- visual selection (4).png…]()
+
+<img width="924" height="841" alt="_- visual selection (4)" src="https://github.com/user-attachments/assets/f8af69f3-7625-49f0-94fd-4916d4b696a7" />
 
 
 ## 🌟 Mobile Optimizations
@@ -340,6 +341,8 @@ npm start
 - **Progressive Enhancement**: Core functionality works on older devices
 - **Safe Area Support**: Proper handling of notches and rounded corners
 - **Landscape Mode**: Optimized layouts for mobile landscape orientation
+  ![Screenshot 2025-08-22 122322](https://github.com/user-attachments/assets/d9289796-a63b-45e4-b2b5-72f5290bb6d5)
+
 
 ## Contributing
 
