@@ -33,6 +33,8 @@ An AI-powered web application that helps optimize resumes for better ATS (Applic
 - **PyMuPDF & pdfplumber** - PDF text extraction
 - **python-docx** - Word document processing
 - **ReportLab** - PDF generation
+  <img width="802" height="670" alt="_- visual selection (1)" src="https://github.com/user-attachments/assets/11830d83-69ec-4110-99f2-b1576ca2c608" />
+
 
 ### Frontend
 - **React** - UI framework
@@ -40,6 +42,8 @@ An AI-powered web application that helps optimize resumes for better ATS (Applic
 - **React Router** - SPA navigation
 - **Axios** - HTTP client
 - **PWA Features** - Service worker, manifest, offline support
+  <img width="528" height="618" alt="_- visual selection" src="https://github.com/user-attachments/assets/acb5ac3b-eec5-41e8-9b32-825eb54f3b44" />
+
 
 ## 🐳 Quick Start with Docker (Recommended)
 
@@ -292,6 +296,9 @@ smart-resume-optimizer/
 └── README.md               # This file
 ```
 
+<img width="2982" height="1805" alt="diagram-export-8-22-2025-4_28_40-PM" src="https://github.com/user-attachments/assets/938fc97a-133c-46cb-a8fc-217e807ccbd1" />
+
+
 ## 🛠️ Development
 
 ### With Docker (Recommended):
@@ -320,6 +327,9 @@ cd frontend
 npm install
 npm start
 ```
+
+![Uploading _- visual selection (4).png…]()
+
 
 ## 🌟 Mobile Optimizations
 
