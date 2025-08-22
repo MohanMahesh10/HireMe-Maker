@@ -1,0 +1,56 @@
+{
+  "short_name": "HireMe Maker",
+  "name": "HireMe Maker - AI-Powered Resume Optimizer",
+  "description": "Optimize your resume for ATS systems using AI technology. Upload your resume, get ATS scores, and generate optimized versions.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/smart-resume-optimizer",
+  "background_color": "#f9fafb",
+  "theme_color": "#2563eb",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/smart-resume-optimizer/",
+  "categories": ["productivity", "business", "utilities"],
+  "lang": "en-US",
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "375x812",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot-desktop.png", 
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Upload Resume",
+      "short_name": "Upload",
+      "description": "Quickly upload and analyze your resume",
+      "url": "/smart-resume-optimizer/upload",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+} 
